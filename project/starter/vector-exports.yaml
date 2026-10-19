@@ -1,0 +1,22 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Supplemental exports for existing S3 Vectors resources
+Resources:
+  VectorResourceExports:
+    Type: AWS::CloudFormation::WaitConditionHandle
+Outputs:
+  VectorBucketArn:
+    Value: arn:aws:s3vectors:us-east-1:087507603104:bucket/udacity-agentcore-vectors-087507603104-111e5cb0
+    Export:
+      Name: udacity-agentcore-VectorBucketArn
+  ReturnsVectorIndex:
+    Value: arn:aws:s3vectors:us-east-1:087507603104:bucket/udacity-agentcore-vectors-087507603104-111e5cb0/index/returns-policy-index
+    Export:
+      Name: udacity-agentcore-ReturnsVectorIndex
+  ShippingVectorIndex:
+    Value: arn:aws:s3vectors:us-east-1:087507603104:bucket/udacity-agentcore-vectors-087507603104-111e5cb0/index/shipping-policy-index
+    Export:
+      Name: udacity-agentcore-ShippingVectorIndex
+  WarrantyVectorIndex:
+    Value: arn:aws:s3vectors:us-east-1:087507603104:bucket/udacity-agentcore-vectors-087507603104-111e5cb0/index/warranty-policy-index
+    Export:
+      Name: udacity-agentcore-WarrantyVectorIndex
